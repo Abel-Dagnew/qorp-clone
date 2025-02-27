@@ -1,6 +1,10 @@
+"use client"
 import { Box, Typography, Button, Grid } from "@mui/material";
-
+import { useRouter } from "next/navigation"; // Import useRouter
+import { Dashboard } from "@/dashboard/pages/index";
 export function Hero() {
+  const router = useRouter(); // Initialize router
+
   return (
     <Box
       sx={{
@@ -31,6 +35,7 @@ export function Hero() {
               py: 1.5,
               fontSize: "1.2rem",
             }}
+            onClick={() => window.location.href = "http://localhost:4000"} // Redirect to dashboard
           >
             Generate Invoice Now
           </Button>
